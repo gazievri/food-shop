@@ -9,24 +9,26 @@ const Recipe = () => {
   const navigate = useNavigate();
   const goBack = () => navigate(-1);
 
-  const meal = recipe[0];
-
   useEffect(() => {
     getMealById(id).then((data) => {
-      setRecipe(data.meals);
-      console.log(data.meals);
+      setRecipe(data.meals[0]);
     });
   }, [id]);
 
   return (
     <>
-      <div className="category-header">
-        <h2 className="title">Meal: {meal.strMeal}</h2>
-        <button className="btn" onClick={goBack}>
-          Go Back
-        </button>
-      </div>
-      {!recipe ? <Preloader /> : ""}
+      {!recipe ? ( <Preloader />) : (
+        <div className="recipe">
+          <img src={recipe.strMealThumb} alt={recipe.strMeal}/>
+          <h1>{recipe.strMeal}</h1>
+          <h6>Category: {recipe.strCategory}</h6>
+          {recipe.area ? <h6>Area: {recipe.strArea}</h6> : null}
+          <p>{recipe.strInstructions}</p>
+          <button className="btn" onClick={goBack}>
+            Go Back
+          </button>
+        </div>
+      )}
     </>
   );
 };

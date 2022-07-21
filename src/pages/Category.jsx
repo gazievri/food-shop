@@ -22,7 +22,7 @@ const Category = () => {
   return (
     <>
       <div className="category-header">
-        <h2 className="title">Category: {name}</h2>
+        <h2 className="title">{name}</h2>
         <button className="btn" onClick={goBack}>
           Go Back
         </button>
