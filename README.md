@@ -24,7 +24,7 @@ https://user-images.githubusercontent.com/96244317/180647905-b4ea0128-b279-4631-
 ## Работа с проектом
 Для запуска проекта, пожалуйста, выполните следующие действия:
 
-1. Склонировать проект на ваш компьютер с [Github](https://github.com/gazievri/food-shop.git) с помощью команды:
+1. Склонировать проект на ваш компьютер с Github с помощью команды:
 ```
 git clone https://github.com/gazievri/food-shop.git
 ```
